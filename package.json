@@ -1,10 +1,27 @@
 {
   "name": "react-selection-manager",
-  "version": "1.0.0",
-  "description": "Context based selection manager for checkboxes in lists",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "version": "0.0.1",
+  "description": "Context based selection manager for checkboxes in lists.",
+  "private": true,
   "author": "Joost Lubach",
-  "license": "ISC"
+  "main": "./src/index.ts",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "lint": "eslint src --ext .ts,.tsx",
+    "check": "tsc -p . --noEmit",
+    "test": "NODE_ENV=test jest"
+  },
+  "devDependencies": {
+    "typescript": "5.4.3"
+  },
+  "peerDependencies": {
+    "react": "^18.0",
+    "react-dom": "^18.0"
+  },
+  "dependencies": {
+    "react": "^18.0",
+    "react-dom": "^18.0"
+  }
 }

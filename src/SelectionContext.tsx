@@ -13,5 +13,9 @@ export const SelectionManagerProvider = (props: SelectionManagerProviderProps) =
 }
 
 export function useSelectionManager() {
-  return React.useContext(SelectionContext)
+  const context = React.useContext(SelectionContext)
+  if (context == null) {
+    throw new Error('useSelectionManager must be used within a SelectionManagerProvider')
+  }
+  return context
 }
