@@ -1,0 +1,1 @@
+{"version":3,"file":"SelectionContext.d.ts","sourceRoot":"","sources":["../../src/SelectionContext.tsx"],"names":[],"mappings":"AAAA,OAAO,KAAK,MAAM,OAAO,CAAA;AACzB,OAAO,gBAAgB,MAAM,oBAAoB,CAAA;AACjD,OAAO,EAAE,GAAG,EAAE,6BAA6B,EAAE,MAAM,SAAS,CAAA;AAI5D,eAAO,MAAM,wBAAwB,GAAI,OAAO,6BAA6B,sBAM5E,CAAA;AAED,wBAAgB,mBAAmB,CAAC,CAAC,SAAS,GAAG,KAK7B,gBAAgB,CAAC,CAAC,CAAC,CACtC"}

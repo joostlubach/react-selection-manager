@@ -1,4 +1,4 @@
-import { SelectionManager } from 'react-selection-manager'
+import SelectionManager from './SelectionManager'
 
 export type Key = string | number | null
 
