@@ -25,10 +25,15 @@
     "test": "NODE_ENV=test jest"
   },
   "devDependencies": {
+    "@types/react": "^19",
+    "rimraf": "^6.1.0",
     "typescript": "^5.8.3"
   },
   "peerDependencies": {
-    "react": "^19.1",
+    "react": "^19",
     "react-dom": "^19.1"
+  },
+  "dependencies": {
+    "mobx": "6"
   }
 }
