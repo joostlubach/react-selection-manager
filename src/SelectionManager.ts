@@ -55,12 +55,16 @@ export default class SelectionManager<K extends Key> {
     this.selected.delete(key)
   }
 
-  public select(key: K) {
-    this.selected.add(key)
+  public select(...keys: K[]) {
+    for (const key of keys) {
+      this.selected.add(key)
+    }
   }
 
-  public deselect(key: K) {
-    this.selected.delete(key)
+  public deselect(...keys: K[]) {
+    for (const key of keys) {
+      this.selected.delete(key)
+    }
   }
 
   public set(key: K, selected: boolean) {
