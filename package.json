@@ -22,7 +22,7 @@
     "clean": "rimraf dist tsconfig.tsbuildinfo",
     "lint": "eslint src --ext ts,tsx",
     "check": "tsc -p . --noEmit",
-    "test": "NODE_ENV=test jest"
+    "test": "vitest"
   },
   "devDependencies": {
     "@types/react": "^19",
