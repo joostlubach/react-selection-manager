@@ -1,8 +1,8 @@
-import React from 'react'
+import React, { createContext, useContext } from 'react'
 import SelectionManager from './SelectionManager'
 import { Key, SelectionManagerProviderProps } from './types'
 
-const SelectionContext = React.createContext<SelectionManager<any> | null>(null)
+const SelectionContext = createContext<SelectionManager<any> | null>(null)
 
 export const SelectionManagerProvider = (props: SelectionManagerProviderProps) => {
   return (
@@ -13,9 +13,13 @@ export const SelectionManagerProvider = (props: SelectionManagerProviderProps) =
 }
 
 export function useSelectionManager<K extends Key>() {
-  const context = React.useContext(SelectionContext)
+  const context = useContext(SelectionContext)
   if (context == null) {
     throw new Error('useSelectionManager must be used within a SelectionManagerProvider')
   }
   return context as SelectionManager<K>
+}
+
+export function useMaybeSelectionManager<K extends Key>() {
+  return useContext(SelectionContext) as SelectionManager<K> | null
 }
