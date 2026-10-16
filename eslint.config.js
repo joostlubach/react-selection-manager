@@ -36,10 +36,14 @@ module.exports = [
     plugins: {
       '@typescript-eslint': require('@typescript-eslint/eslint-plugin'),
       '@stylistic': require('@stylistic/eslint-plugin'),
+      'jsx-a11y': require('eslint-plugin-jsx-a11y'),
       'unused-imports': require('eslint-plugin-unused-imports'),
       '@mosdev': require('@mosdev/eslint-plugin')
     },
 
-    rules: yaml.parse(FS.readFileSync('../../eslint.rules.yml', 'utf-8'))
+    rules: {
+      ...yaml.parse(FS.readFileSync('../../eslint.rules.yml', 'utf-8')),
+      ...require('eslint-plugin-jsx-a11y').flatConfigs.recommended.rules,
+    }
   }
 ]
