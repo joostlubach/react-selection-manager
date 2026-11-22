@@ -1,5 +1,5 @@
 {
-  "name": "react-selection-manager",
+  "name": "@mosdev/react-selection-manager",
   "version": "0.0.1",
   "description": "Context based selection manager for checkboxes in lists.",
   "private": true,
